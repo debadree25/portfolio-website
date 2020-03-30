@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: poplight;
+    src: url('./fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: popmed;
+    src: url('./fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: popreg;
+    src: url('./fonts/Poppins-Regular.ttf');
+}
+
+body {
+    font-family: poplight;
+}
+
+nav {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    font-size: 18px;
+}
+
+nav .logo {
+    grid-column: 2/3;
+    align-self: center;
+}
+
+nav .hamburger {
+    grid-column: 4/5;
+    align-self: center;
+    justify-self: center;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./img/img.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.headline {
+    background: white;
+    font-size: 48px;
+    padding: 3px;
+}
+
+
+.about {
+    width: 90% ;
+    margin: auto;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 50px;
+}
+
+.profile {
+    width: 435px;
+    height: 500px;
+    align-self: center;
+    justify-self: right;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.works-section {
+    background-image: url('./img/works.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: auto;
+}
+
+.works-text {
+    background: white;
+    padding: 10px;
+}
+
+.works-text ul {
+    list-style-position: inside;
+}
+
+.skills-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
