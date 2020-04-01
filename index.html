@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header id='banner'>
         <div class="banner">
             <nav>
                 <h3 class="logo">DC</h3>
@@ -58,15 +58,18 @@
                 <div class="interests">
                     <h1>My Areas of Interest : </h1>
                     <div class="interest-table">
-                        <ul>
-                            <li>Full Stack Web Development</li>
-                            <li>Android App Development</li>
-                            <li>UI/UX</li>
-                            <li>Internet of Things</li>
-                            <li>Robotics</li>
-                        </ul>
+                        <div style="background-image: url(./img/interest1.jpg); width:100%;" class="interest">
+                            Web Development
+                        </div>
+                        <div style="background-image: url('./img/interest2.jpg'); width:100%;" class="interest">
+                            App Development
+                        </div>
+                        <div style="background-image: url('./img/interest3.jpg'); width:100%;" class="interest">
+                            Robotics/IoT
+                        </div>
                     </div>
                 </div>
+                <hr>
                 <div class="skills-table-wrapper">
                     <h1>My Skills : </h1>
                     <div class="skills-table">
@@ -123,7 +126,7 @@
                     <div class="project-container">
                         <h4>Basic Customer Management System</h4>
                         <p>A very simple customer management system created with DJango library</p>
-                        <p>Project Link : <a href="">hjds</a></p>
+                        <p>Project Link : <a href="">github</a></p>
                     </div>
                 </div>
                 <div class="project">
@@ -131,7 +134,7 @@
                     <div class="project-container">
                         <h4>Quiz Game</h4>
                         <p>A very simple quiz game app created with AngularJS</p>
-                        <p>Project Link : <a href="https://github.com/debadree25/quizshow_mea">link</a></p>
+                        <p>Project Link : <a href="https://github.com/debadree25/quizshow_mea">github</a></p>
                     </div>
                 </div>
                 <div class="project">
@@ -145,6 +148,8 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

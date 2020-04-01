@@ -30,6 +30,8 @@ nav {
     grid-template-columns: 10% 1fr 1fr 10%;
     font-size: 18px;
     color: white;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: multiply;
 }
 
 nav .logo {
@@ -82,7 +84,7 @@ nav .hamburger {
     color: white;
     font-size: 26px;
     font-weight: normal !important;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,1);
     background-blend-mode: multiply;
     padding-bottom: 20px;
 }
@@ -91,10 +93,15 @@ nav .hamburger {
 .about {
     width: 90% ;
     margin: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.about-text {
+    width: 60%;
 }
 
 .about h1 {
@@ -106,8 +113,8 @@ nav .hamburger {
 }
 
 .profile {
-    width: 500px;
     height: 500px;
+    width: 500px;
     align-self: center;
     justify-self: left;
     padding-left: 80px;
@@ -157,12 +164,29 @@ nav .hamburger {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .interest-table ul {
     list-style-type: disc;
     list-style-position: inside;
+}
+
+.interest {
+    width: 640px;
+    height: 426px;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.interest:hover {
+    background-color: rgba(0,0,0,0.7);
 }
 
 .skills-table {
