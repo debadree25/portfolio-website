@@ -32,6 +32,10 @@ nav {
     color: white;
     background-color: rgba(0,0,0,0.3);
     background-blend-mode: multiply;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav .logo {
@@ -201,7 +205,8 @@ nav .hamburger {
 }
 
 .icon {
-    padding: 2px;
+    padding-right: 10px;
+    font-size: 24px;
 }
 
 .projects {
@@ -234,4 +239,27 @@ nav .hamburger {
 
 .project-container {
     padding: 20px;
+}
+
+.contact-section {
+    background-image: url('./img/contact.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 5%;
+}
+
+.contact-text {
+    background-color: white;
+    width: 40%;
+    padding: 30px;
 }
