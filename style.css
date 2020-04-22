@@ -27,15 +27,16 @@ body {
 nav {
     height: 10vh;
     display: grid;
-    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-columns: 10% 1fr 1fr 1fr;
     font-size: 18px;
     color: white;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
 }
 
 nav .logo {
@@ -50,14 +51,27 @@ nav .hamburger {
     justify-self: center;
 }
 
+.links {
+    padding-right: 30px;
+    grid-column: 4/5;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: space-between;
+}
+
+.links h3 {
+    padding-left: 20px;
+}
+
 .banner {
     width: 100%;
-    height: 100vh;
-    background-image: url('./img/img.jpg');
+    height: 95vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('./img/img.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0,0,0,0.15);
     background-blend-mode: multiply;
 }
 
@@ -71,11 +85,11 @@ nav .hamburger {
 }
 
 .headline {
-    background-color: white;
     font-size: 48px;
     padding: 3px;
-    padding-left:5px;
+    padding-left: 5px;
     padding-right: 10px;
+    color: white;
 }
 
 .headline h1 {
@@ -88,24 +102,107 @@ nav .hamburger {
     color: white;
     font-size: 26px;
     font-weight: normal !important;
-    background-color: rgba(0,0,0,1);
     background-blend-mode: multiply;
     padding-bottom: 20px;
 }
 
+.progress {
+    height: 8px;
+    width: 100%;
+    margin: auto;
+    background-color: #B0B0B0;
+    border-radius: 16px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 16px;
+}
+
+.progress-bar span {
+    background-color: yellow;
+    position: absolute;
+    bottom: -20px;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 2px 3px 2px 4px;
+    right: -1.4em;
+    border-radius: 2px;
+}
+
+.progress-bar span::after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: yellow;
+    border-width: 5px;
+    margin-left: -5px;
+}
+
+.skew::before {
+    background-color: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(-5deg);
+}
+
+.skew-right::before {
+    background-color: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(5deg);
+}
+
+.icon {
+    padding-right: 10px;
+    font-size: 24px;
+}
+
+.section-img {
+    z-index: 2;
+    height: 500px;
+    padding: 50px;
+    width: 50%;
+}
+
+.section-lead {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.about-section {
+    background-color: #E0E0E0;
+}
 
 .about {
-    width: 90% ;
+    background-color: #E0E0E0;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-bottom: 150px;
 }
 
 .about-text {
-    width: 60%;
+    width: 50%;
+    z-index: 2;
 }
 
 .about h1 {
@@ -116,97 +213,70 @@ nav .hamburger {
     padding-top: 5px;
 }
 
-.profile {
-    height: 500px;
-    width: 500px;
-    align-self: center;
-    justify-self: left;
-    padding-left: 80px;
+.education {
+    background-color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    padding-bottom: 150px;
 }
 
-.profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.education-text {
+    width: 50%;
+    z-index: 2;
+    text-align: center;
+}
+
+.education-text > div {
+    padding-top: 10px;
 }
 
 .skills-section {
-    background-image: url('./img/skills.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
+    background-color: #E0E0E0;
 }
 
 .skills {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-bottom: 150px;
 }
 
 .skills-text {
-    width: 90%;
+    width: 50%;
+    z-index: 2;
+}
+
+.skill {
+    width: 60%;
     margin: auto;
-    background: white;
-    padding: 30px;
+    padding-bottom: 20px;
 }
 
-.skills-text h1 {
-    font-size: 36px;
+.skill h4 {
+    margin-bottom: 5px;
+    padding-left: 10px;
 }
 
-.skills-text ul {
-    list-style-type: none;
-    
+.projects-section {
+    background-color: white;
 }
 
-.skills-text li {
-    padding: 5px;
-}
-
-.interest-table {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    gap: 20px;
-}
-
-.interest-table ul {
-    list-style-type: disc;
-    list-style-position: inside;
-}
-
-.interest {
-    width: 640px;
-    height: 426px;
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
-    color:white;
+.projects {
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    transition: background-color 0.3s;
+    padding-bottom: 150px;
 }
 
-.interest:hover {
-    background-color: rgba(0,0,0,0.7);
-}
-
-.skills-table {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    gap: 10px;
-}
-
-.skills-table h3 {
-    font-size: 24px;
-}
-
-.icon {
-    padding-right: 10px;
-    font-size: 24px;
+.projects-text {
+    width: 80%;
+    z-index: 2;
 }
 
 .projects {
@@ -242,24 +312,21 @@ nav .hamburger {
 }
 
 .contact-section {
-    background-image: url('./img/contact.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
-    display: flex;
-    flex-direction: column;
+    background-color: #E0E0E0;    
 }
 
-.contact {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 5%;
+.contacts {
+    background-color: #E0E0E0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-bottom: 250px;
 }
 
 .contact-text {
-    background-color: white;
-    width: 40%;
-    padding: 30px;
+    width: 50%;
+    z-index: 2;
+    text-align: center;
 }
