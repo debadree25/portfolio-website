@@ -5,23 +5,40 @@
 }
 
 @font-face {
-    font-family: poplight;
-    src: url('./fonts/Poppins-Light.ttf');
+    font-family: montbold;
+    src: url('./fonts/Montserrat-Bold.ttf');
 }
 
 @font-face {
-    font-family: popmed;
-    src: url('./fonts/Poppins-Medium.ttf');
+    font-family: montmed;
+    src: url('./fonts/Montserrat-Medium.ttf');
 }
 
 @font-face {
-    font-family: popreg;
-    src: url('./fonts/Poppins-Regular.ttf');
+    font-family: montlight;
+    src: url('./fonts/Montserrat-Light.ttf');
 }
 
-body {
-    font-family: poplight;
-    font-size: 18px;
+@font-face {
+    font-family: openreg;
+    src:url('./fonts/OpenSans-Regular.ttf');
+}
+
+h1,h2 {
+    font-family: montbold;
+}
+
+h3,h4 {
+    font-family: montmed;
+}
+
+h5,h6 {
+    font-family: montlight;
+}
+
+p {
+    font-family: openreg;
+    font-size: 20px;
 }
 
 nav {
@@ -65,6 +82,30 @@ nav .hamburger {
     padding-left: 20px;
 }
 
+#menu {
+    display: none;
+    font-size: 30px;
+    align-self: center;
+    justify-self: center;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    z-index: 100;
+}
+
 .banner {
     width: 100%;
     height: 95vh;
@@ -93,11 +134,11 @@ nav .hamburger {
 }
 
 .headline h1 {
-    text-align: center;
+    padding-left: 50px;
 }
 
 .lead {
-    text-align: center;
+    padding-left: 55px;
     padding-top: 20px;
     color: white;
     font-size: 26px;
@@ -174,6 +215,11 @@ nav .hamburger {
     font-size: 24px;
 }
 
+.icon-large {
+    font-size: 36px;
+    padding-right: 18px;
+}
+
 .section-img {
     z-index: 2;
     height: 500px;
@@ -184,6 +230,7 @@ nav .hamburger {
 .section-lead {
     text-align: center;
     padding-bottom: 20px;
+    font-size: 36px;
 }
 
 .about-section {
@@ -203,10 +250,6 @@ nav .hamburger {
 .about-text {
     width: 50%;
     z-index: 2;
-}
-
-.about h1 {
-    font-size: 36px;
 }
 
 .about p {
@@ -286,10 +329,6 @@ nav .hamburger {
     padding-bottom: 100px;
 }
 
-.projects h1 {
-    font-size: 36px;
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -329,4 +368,41 @@ nav .hamburger {
     width: 50%;
     z-index: 2;
     text-align: center;
+}
+
+
+@media only screen and (max-width:768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .links h3 {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+    .headline {
+        font-size: 36px;
+    }
+    .section-img {
+        display: none;
+    }
+    .about-text,.education-text,.skills-text,.contact-text {
+        width: 80%;
+        margin: auto;
+    }
+    .about,.education,.skills,.contacts {
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .logo {
+        padding-left: 10px;
+    }
+    .responsive {
+        height: 30vh;
+    }
 }
